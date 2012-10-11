@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <ProductVersion>1.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6718d9ce-4ffb-4629-b707-f2e2b19139ac}</ProjectGuid>
+    <OutputType>UserMod</OutputType>
+    <ProjectType>UnrealScript</ProjectType>
+    <RootNamespace>MyGame</RootNamespace>
+    <AssemblyName>MyGame</AssemblyName>
+    <Name>MyGame</Name>
+    <TargetGame>UnrealEngine 3 Licensee</TargetGame>
+    <BaseContentPath>..\..\Engine\Content</BaseContentPath>
+    <GameContentPath>..\..\UDKGame\Content</GameContentPath>
+    <PackageExtensions>.upk;.udk</PackageExtensions>
+    <UccPath>..\..\..\Binaries\Win64\UDK.exe</UccPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <UccUseUnpublished>False</UccUseUnpublished>
+    <UseUnpublished>False</UseUnpublished>
+    <ForceWindowedMode>True</ForceWindowedMode>
+    <WindowWidth>1024</WindowWidth>
+    <WindowHeight>768</WindowHeight>
+    <ShowLogWindow>False</ShowLogWindow>
+    <LogToFile>False</LogToFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <UccUseUnpublished>False</UccUseUnpublished>
+    <UseUnpublished>False</UseUnpublished>
+    <ForceWindowedMode>False</ForceWindowedMode>
+    <ShowLogWindow>False</ShowLogWindow>
+    <LogToFile>False</LogToFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="*\Classes\*.uc" />
+    <Compile Include="Classes\MyBaseGameCrowdAgent.uc" />
+    <Compile Include="Classes\MyBot.uc" />
+    <Compile Include="Classes\MyGameCrowdAgent.uc" />
+    <Compile Include="Classes\MyGameInfo.uc" />
+    <Compile Include="Classes\MyHUD.uc" />
+    <Compile Include="Classes\MyPlayerCamera.uc" />
+    <Compile Include="Classes\MyPlayerController.uc" />
+    <Compile Include="Classes\TestZombieBot.uc" />
+    <Compile Include="Classes\ZombiePawn.uc" />
+    <Content Include="**\*.uci" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes" />
+  </ItemGroup>
+  <Import Condition="'$(MSBuildExtensionsPath32)' != ''" Project="$(MSBuildExtensionsPath32)\PixelMine\UnrealScript.targets" />
+  <Import Condition="'$(MSBuildExtensionsPath32)' == ''" Project="$(MSBuildExtensionsPath)\PixelMine\UnrealScript.targets" />
+</Project>

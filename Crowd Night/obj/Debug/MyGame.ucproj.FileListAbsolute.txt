@@ -1,0 +1,2 @@
+C:\Program Files\UDK\UnrealEngine\Development\Src\MyGame\obj\Debug\MyGame.ucproj.UnrealScriptGeneratedFileListAbsolute.txt
+C:\Program Files\UDK\UnrealEngine\Development\Src\MyGame\obj\MyGame.ucproj.UnrealScriptConfigurationLog.txt
